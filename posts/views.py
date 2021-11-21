@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 
 
 class PostViewSet(viewsets.ModelViewSet):
-    permission_classes = (permissions.IsAuthenticated, )
+    permission_classes = (permissions.IsAdminUser, )
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
